@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  color: #222;
+  font-family: "Montserrat", sans-serif;
+  font-size: 300;
+}
+.wrapper {
+  width: 1200px;
+  margin: 50px auto;
+}
+header {
+  position: relative;
+}
+header .logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+header ul.nav {
+  float: right;
+  list-style: none;
+}
+header ul.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+header ul.nav li:hover {
+  opacity: 0.5;
+}
+header .shop-cart-button {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+  color: red;
+  transform: scale(1.5);
+}
+header .shop-cart {
+  position: absolute;
+  width: 450px;
+  background: rgb(226, 226, 231);
+  right: 0;
+  top: 30px;
+  z-index: 999;
+  -webkit-box-shadow: 5px 3px 25px -12px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 5px 3px 25px -12px rgba(66, 68, 90, 1);
+  box-shadow: 5px 3px 25px -12px rgba(66, 68, 90, 1);
+  padding: 20px;
+  padding-bottom: 0;
+}
+header .shop-cart .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+header .shop-cart .item img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+header .shop-cart .item h2 {
+  font-size: 20px;
+}
+header .shop-cart .item p {
+  color: rgb(148, 224, 113);
+  font-weight: 600;
+}
+header .shop-cart .item .delete-item {
+  color: rgb(252, 85, 8);
+  float: right;
+  position: relative;
+  top: -25px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+header .shop-cart .item .delete-item:hover {
+  color: red;
+  transform: scale(1.5);
+}
+header .shop-cart .empty h2 {
+  margin-bottom: 20px;
+}
+header .shop-cart .summa {
+  margin-bottom: 20px;
+  float: left;
+  font-size: 20px;
+  font-weight: 600;
+}
+header .presentation {
+  width: 100%;
+  height: 500px;
+  margin: 50px 0;
+  background: url("img/IMG_20210523_165935_780.jpg") no-repeat;
+  background-size: cover;
+  background-position: center 35%;
+  background-blend-mode: multiply;
+  background-color: rgb(226, 226, 156);
+  position: relative;
+}
+header .presentation::after {
+  content: "Perfect day together";
+  color: white;
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  font-size: 40px;
+  width: 300px;
+  font-weight: 600;
+}
+header .presentation::before {
+  content: "Grodziec";
+  color: white;
+  position: absolute;
+  bottom: 25px;
+  right: -60px;
+  font-size: 40px;
+  width: 300px;
+  font-weight: 600;
+}
+.categories div {
+  display: inline-block;
+  background: #f2f2f2;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+.categories div:hover {
+  border-color: silver;
+  transform: scale(1.1);
+}
+.full-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000b7;
+  z-index: 5000;
+  overflow: auto;
+}
+.full-item > div {
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 9px;
+}
+main div {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+main .item {
+  width: 30%;
+  margin-bottom: 50px;
+  background: rgb(226, 226, 156);
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+main .item img,
+.full-item img {
+  width: 100%;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+main .item img:hover {
+  transform: scale(1.05);
+}
+main h2,
+main p {
+  margin: 10px 20px;
+  color: #333;
+}
+main .add-to-cart,
+.full-item .add-to-cart {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: #ca5252;
+  right: 20px;
+  bottom: 20px;
+  padding-bottom: 0;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover {
+  transform: scale(1.5);
+}
+footer {
+  text-align: center;
+}
